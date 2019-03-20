@@ -53,43 +53,43 @@ module.exports = {
       type: 'string',
       message: '作者',
     },
-    scriptFolder: {
-      when: 'isNotTest',
-      type: 'list',
-      message: '资源文件名称',
-      choices: [{
-          name: 'mscript',
-          value: 'mscript',
-          short: 'mscript',
-        },
-        {
-          name: 'vscript',
-          value: 'vscript',
-          short: 'vscript',
-        },
-      ],
-    },
-    siteId: {
-      when: 'isNotTest',
-      type: 'list',
-      message: '项目对应站点siteId',
-      choices: [{
-          name: 'm',
-          value: 'm',
-          short: 'm',
-        },
-        {
-          name: 'vmall',
-          value: 'vmall',
-          short: 'vmall',
-        },
-        {
-          name: 'app',
-          value: 'app',
-          short: 'app',
-        }
-      ],
-    },
+    // scriptFolder: {
+    //   when: 'isNotTest',
+    //   type: 'list',
+    //   message: '资源文件名称',
+    //   choices: [{
+    //       name: 'mscript',
+    //       value: 'mscript',
+    //       short: 'mscript',
+    //     },
+    //     {
+    //       name: 'vscript',
+    //       value: 'vscript',
+    //       short: 'vscript',
+    //     }
+    //   ],
+    // },
+    // siteId: {
+    //   when: 'isNotTest',
+    //   type: 'list',
+    //   message: '项目对应站点siteId',
+    //   choices: [{
+    //       name: 'm',
+    //       value: 'm',
+    //       short: 'm',
+    //     },
+    //     {
+    //       name: 'vmall',
+    //       value: 'vmall',
+    //       short: 'vmall',
+    //     },
+    //     {
+    //       name: 'app',
+    //       value: 'app',
+    //       short: 'app',
+    //     },
+    //   ],
+    // },
     cmsViewName: {
       when: 'isNotTest',
       type: 'string',
