@@ -68,7 +68,7 @@ module.exports = {
           short: 'vscript',
         },
       ],
-    }
+    },
     siteId: {
       when: 'isNotTest',
       type: 'list',
