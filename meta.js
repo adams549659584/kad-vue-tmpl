@@ -46,17 +46,49 @@ module.exports = {
       type: 'string',
       required: false,
       message: '项目描述',
-      default: '基于Vue的 Kad2.0 Wap 项目模板',
+      default: '基于Vue的 Kad2.0 Wap 项目',
     },
     author: {
       when: 'isNotTest',
       type: 'string',
       message: '作者',
     },
+    scriptFolder: {
+      when: 'isNotTest',
+      type: 'list',
+      message: '资源文件名称',
+      choices: [{
+          name: 'mscript',
+          value: 'mscript',
+          short: 'mscript',
+        },
+        {
+          name: 'vscript',
+          value: 'vscript',
+          short: 'vscript',
+        },
+      ],
+    }
     siteId: {
       when: 'isNotTest',
-      type: 'string',
+      type: 'list',
       message: '项目对应站点siteId',
+      choices: [{
+          name: 'm',
+          value: 'm',
+          short: 'm',
+        },
+        {
+          name: 'vmall',
+          value: 'vmall',
+          short: 'vmall',
+        },
+        {
+          name: 'app',
+          value: 'app',
+          short: 'app',
+        }
+      ],
     },
     cmsViewName: {
       when: 'isNotTest',

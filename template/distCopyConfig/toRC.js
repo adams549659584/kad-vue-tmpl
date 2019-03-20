@@ -1,7 +1,7 @@
 const rm = require('rimraf');
 const config = require('./index');
 
-const resToPath = '\\\\192.168.1.55\\skin\\{{siteId}}script\\vue\\{{cmsViewName}}';
+const resToPath = '\\\\192.168.1.55\\skin\\{{scriptFolder}}\\vue\\{{cmsViewName}}';
 
 rm(resToPath, err => {
   if (err) throw err;

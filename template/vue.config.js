@@ -4,11 +4,11 @@ const isProd = process.env.NODE_ENV === 'production';
 const baseUrl = (() => {
   switch (process.env.VUE_APP_DEPLOY_ENV) {
     case 'tst':
-      return '//tstres.360kad.com/{{siteId}}script/vue/{{cmsViewName}}/';
+      return '//tstres.360kad.com/{{scriptFolder}}/vue/{{cmsViewName}}/';
     case 'rc':
-      return '//rcres.360kad.com/{{siteId}}script/vue/{{cmsViewName}}/';
+      return '//rcres.360kad.com/{{scriptFolder}}/vue/{{cmsViewName}}/';
     case 'prod':
-      return '//res.360kad.com/{{siteId}}script/vue/{{cmsViewName}}/';
+      return '//res.360kad.com/{{scriptFolder}}/vue/{{cmsViewName}}/';
     default:
       return '/';
   }
@@ -23,7 +23,7 @@ module.exports = {
   publicPath: baseUrl,
   devServer: {
     open: true,
-    host: 'dev{{siteId}}}.360kad.com',
+    host: 'dev{{siteId}}.360kad.com',
     // port: '8080',
     proxy: 'http://tst{{siteId}}.360kad.com'
   },
