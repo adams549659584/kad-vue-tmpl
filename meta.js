@@ -53,22 +53,27 @@ module.exports = {
       type: 'string',
       message: '作者',
     },
-    // scriptFolder: {
-    //   when: 'isNotTest',
-    //   type: 'list',
-    //   message: '资源文件名称',
-    //   choices: [{
-    //       name: 'mscript',
-    //       value: 'mscript',
-    //       short: 'mscript',
-    //     },
-    //     {
-    //       name: 'vscript',
-    //       value: 'vscript',
-    //       short: 'vscript',
-    //     }
-    //   ],
-    // },
+    cmsViewName: {
+      when: 'isNotTest',
+      type: 'string',
+      message: '项目对应的cms页面名称',
+    },
+    scriptFolder: {
+      when: 'isNotTest',
+      type: 'list',
+      message: '资源文件名称',
+      choices: [{
+          name: 'mscript',
+          value: 'mscript',
+          short: 'mscript',
+        },
+        {
+          name: 'vscript',
+          value: 'vscript',
+          short: 'vscript',
+        }
+      ],
+    },
     // siteId: {
     //   when: 'isNotTest',
     //   type: 'list',
@@ -90,11 +95,6 @@ module.exports = {
     //     },
     //   ],
     // },
-    cmsViewName: {
-      when: 'isNotTest',
-      type: 'string',
-      message: '项目对应的cms页面名称',
-    },
     autoInstall: {
       when: 'isNotTest',
       type: 'list',
