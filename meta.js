@@ -61,7 +61,7 @@ module.exports = {
     scriptFolder: {
       when: 'isNotTest',
       type: 'list',
-      message: '资源文件名称',
+      message: '资源文件夹名称',
       choices: [{
           name: 'mscript',
           value: 'mscript',
@@ -74,27 +74,22 @@ module.exports = {
         }
       ],
     },
-    // siteId: {
-    //   when: 'isNotTest',
-    //   type: 'list',
-    //   message: '项目对应站点siteId',
-    //   choices: [{
-    //       name: 'm',
-    //       value: 'm',
-    //       short: 'm',
-    //     },
-    //     {
-    //       name: 'vmall',
-    //       value: 'vmall',
-    //       short: 'vmall',
-    //     },
-    //     {
-    //       name: 'app',
-    //       value: 'app',
-    //       short: 'app',
-    //     },
-    //   ],
-    // },
+    siteId: {
+      when: 'isNotTest',
+      type: 'list',
+      message: '项目对应站点',
+      choices: [{
+          name: 'm',
+          value: 'm',
+          short: 'm',
+        },
+        {
+          name: 'v',
+          value: 'v',
+          short: 'v',
+        }
+      ],
+    },
     autoInstall: {
       when: 'isNotTest',
       type: 'list',
