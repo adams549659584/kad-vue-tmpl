@@ -68,9 +68,14 @@ module.exports = {
           short: 'm',
         },
         {
-          name: 'v',
-          value: 'v',
-          short: 'v',
+          name: 'vmall',
+          value: 'vmall',
+          short: 'vmall',
+        },
+        {
+          name: 'app',
+          value: 'app',
+          short: 'app',
         }
       ],
     },
