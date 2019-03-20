@@ -19,8 +19,16 @@ export const KadRouteConfigs: IKadRouteConfigs = {
     meta: {
       title: '关于'
     }
+  },
+  notFound: {
+    name: 'notFound',
+    component: () =>
+      import(/* webpackChunkName: "notFound" */ '@/views/NotFound/NotFound.vue'),
+    meta: {
+      title: '404 not found'
+    }
   }
 };
 
-const router = RouteHelper.initRoutes('vue_common_m', KadRouteConfigs);
+const router = RouteHelper.initRoutes('{{cmsViewName}}', KadRouteConfigs);
 export default router;
