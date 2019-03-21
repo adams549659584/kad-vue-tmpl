@@ -23,7 +23,15 @@
     "noResolve": false,
     "preserveConstEnums": true,
     "noEmit": false,
-    "inlineSourceMap": false
+    "inlineSourceMap": false,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "Kpublic/*": [
+        "public/*"
+      ]
+    },
   },
   "include": [
     "src/**/*"
