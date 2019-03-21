@@ -1,11 +1,11 @@
-export interface AdView {
+export interface IAdView {
   /**
    * 广告位编码
    */
-  [key: string]: AdEnt[];
+  [key: string]: IAdEnt[];
 }
 
-export interface AdEnt {
+export interface IAdEnt {
   /**
    * 广告位编码
    */

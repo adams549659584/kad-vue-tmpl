@@ -1,7 +1,8 @@
 import store from '@/store';
 import { Module, VuexModule, getModule, MutationAction } from 'vuex-module-decorators';
-import { AdView } from '@/api/viewModel/Ad/AdView';
-import AdApi, { IGetAdListParams } from '@/api/AdApi';
+import { IAdView } from '@/api/viewModel/Ad/IAdView';
+import AdApi from '@/api/AdApi';
+import { IGetAdListParams } from '@/api/viewModel/Ad/IGetAdListParams';
 
 /**
  * State 定义
@@ -10,7 +11,7 @@ import AdApi, { IGetAdListParams } from '@/api/AdApi';
  * @interface IAdState
  */
 export interface IAdState {
-  AdView: AdView;
+  AdView: IAdView;
 }
 
 @Module({
@@ -20,7 +21,7 @@ export interface IAdState {
   dynamic: true
 })
 class AdModule extends VuexModule implements IAdState {
-  AdView: AdView = {};
+  AdView: IAdView = {};
 
   @MutationAction
   async getAdList(params: IGetAdListParams) {

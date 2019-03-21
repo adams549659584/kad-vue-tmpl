@@ -1,16 +1,6 @@
-import { AdView } from './viewModel/Ad/AdView';
+import { IAdView } from './viewModel/Ad/IAdView';
 import { BaseApi } from '@kad2.0/kad-core';
-
-/**
- * 获取广告位发布接口参数
- */
-export interface IGetAdListParams {
-  /**
-   * 广告位编码集合
-   */
-  adSplaceList: string[];
-}
-
+import { IGetAdListParams } from './viewModel/Ad/IGetAdListParams';
 /**
  * 广告相关接口
  */
@@ -21,6 +11,6 @@ export default class AdApi extends BaseApi {
    */
   static getAdList(params: IGetAdListParams) {
     const uri = `/Ad/GetList`;
-    return super.post<AdView>(uri, params);
+    return super.post<IAdView>(uri, params);
   }
 }
